@@ -1,17 +1,16 @@
 import React, {Component} from 'react'
 import  Media from './media.js'
 import PropTypes from 'prop-types'
+import './playlist.css'
 
  class Playlist extends Component {
     render() {
-        const Playlist = this.props.data.categories
+        const Playlist = this.props.data.categories[0].playlist
         return (
-            <div>
+            <div className= "Playlist">
                 {
                     Playlist.map((item) =>{
-                        return item.playlist.map((item) =>{
-                            return <Media {...item} key= {item.id}/>
-                        }) 
+                        return <Media {...item} key= {item.id}/>
                     })
                 }
                 

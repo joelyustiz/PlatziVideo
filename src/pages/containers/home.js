@@ -20,6 +20,10 @@ class Home extends Component {
         })
 
     }
+
+    componentDidCatch (error, info){
+
+    }
     render() {
         return (
             <HomeLayout>

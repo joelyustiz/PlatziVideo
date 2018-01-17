@@ -4,16 +4,20 @@ import Categories from '../../categories/components/categories'
 import Related from '../components/related'
 import ModalContainer from '../../widgets/containers/modal'
 import Modal from '../../widgets/components/modal'
+import HandleError from '../../error/containers/handle-error'
 
 class Home extends Component {
+
     state = {
-        modalVisible: false
+        modalVisible: false,
     }
+
     handleOpenModal = (event) =>{
         this.setState({
             modalVisible: true,
         })
     }
+
     handleCloseModal = (event) =>{
         this.setState({
             modalVisible: false,
@@ -21,28 +25,29 @@ class Home extends Component {
 
     }
 
-    componentDidCatch (error, info){
-         
-    }
     render() {
+    
         return (
-            <HomeLayout>
-                <Related />
-                <Categories 
-                    categories = {this.props.data.categories}
-                    handleOpenModal = {this.handleOpenModal }
-                />
-               {
-                    this.state.modalVisible && //if condicional solo ve true o false
-                    <ModalContainer>
-                    <Modal
-                        handleClick = {this.handleCloseModal}
-                    >
+            <HandleError>
+                <HomeLayout>
+                    <Related />
+                    <Categories 
+                        categories = {this.props.data.categories}
+                        handleOpenModal = {this.handleOpenModal }
+                    />
+                {
+                        this.state.modalVisible && //if condicional solo ve true o false
+                        <ModalContainer>
+                            <Modal
+                                handleClick = {this.handleCloseModal}
+                            >
 
-                    </Modal>
-                </ModalContainer>
-               }
-            </HomeLayout>
+                            </Modal>
+                        </ModalContainer>
+                }
+                </HomeLayout>
+            </HandleError>
+          
         )
     }
 }

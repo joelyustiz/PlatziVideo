@@ -35,7 +35,7 @@ class Home extends Component {
                         categories = {this.props.data.categories}
                         handleOpenModal = {this.handleOpenModal }
                     />
-                {
+                    {
                         this.state.modalVisible && //if condicional solo ve true o false
                         <ModalContainer>
                             <Modal
@@ -44,7 +44,7 @@ class Home extends Component {
 
                             </Modal>
                         </ModalContainer>
-                }
+                    }
                 </HomeLayout>
             </HandleError>
           

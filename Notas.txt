@@ -69,3 +69,22 @@ Llaman acciones
 Generados por higher order components
 
 /////// Coposicion de Componentes
+
+
+**Referencias **
+
+Las referencias nos permite alamacenar en react un elemento HTML
+
+value // No permite editar el input al menos que se envie el valor mediante props.
+defaultValue // permite editar el input
+
+Al asignar valor a la propiedad value de un elemento input,
+ se está definiendo como valor inmutable, y el input se vuelve un 
+ elemento de sólo lectura … como una constante.
+
+Para permitir la mutabilidad del valor, se debe asignar mediante la 
+propiedad defaultValue en lugar de value.
+
+En cualquiera de los dos casos anteriores, se debería también definir 
+la propiedad (evento) onChange del input para poder manipular posteriormente su valor, y/o disparar
+ el update (re-renderizado) del componente.

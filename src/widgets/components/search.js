@@ -12,12 +12,21 @@ import './search.css';
 //     )
 // }
 
-const Search = () => ( //parentecis para implicar el return
-    <form action="" className="Search">
-        <input  type="text" 
-                name="" 
+const Search = (props) => ( //parentecis para implicar el return
+    <form 
+        action="" 
+        className="Search"
+        onSubmit={props.handleSubmit}
+    >
+        <input  
+                ref={props.setRef}//Referencia en React 
+                type="text" 
+                name="search" 
                 id=""
                 className="Search-input"
+                placeholder= "busca tu musica"
+                onChange = {props.handleChange}
+                value= {props.value}
         />
     </form>
 )

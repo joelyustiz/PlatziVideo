@@ -28,10 +28,12 @@ class Home extends Component {
     render() {
     
         return (
-            <HandleError>
+            <HandleError> 
                 <HomeLayout>
                     <Related />
-                    <VideoPlayer/>
+                    <VideoPlayer 
+                        autoPlay
+                    />
                     <Categories 
                         categories = {this.props.data.categories}
                         handleOpenModal = {this.handleOpenModal }

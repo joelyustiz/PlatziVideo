@@ -3,8 +3,7 @@ import RegularError from '../components/regular-error'
 
 class HandleError extends Component {
 
-    state = {
-       
+    state = {     
         handleError: false,
     }
 

@@ -9,4 +9,4 @@ function Related(props) {
     )
 }
 
-export default Related;
+export default Related; 

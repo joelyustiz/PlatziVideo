@@ -6,8 +6,8 @@ classMiComponenteextendsComponents{
 	componentWillMount(){
 	// Se ejecuta antes de montar el componente
 	// Se podría usar para hacer un setState()
-		1. puedes hacer un setState
-		2. No hagas llamados a un API o suscripcion de evenntos
+		// 1. puedes hacer un setState
+		// 2. No hagas llamados a un API o suscripcion de evenntos
 	}
 	render(){
 	// Contiene todos los elementos a renderizar
@@ -45,46 +45,46 @@ classMiComponenteextendsComponents{
 
 }
 
-Presentacional Cómo se ve
+// Presentacional Cómo se ve
 
--Puede contener smart components u otros componentes de UI
--Permiten composición con `[props.children]``
--No depeden del resto de la aplicación
--No especifica cómo los datos son cargados o mutados
--Recibe datos y callbacks solo con propiedades
--Rara vez tienen su propio estado
--Están escritos como componentes funcionales a menos que necesiten mejoras de performance. 
-		Sólo pueden ser Componentes funcionales o Pure Components
-
-
-Containers Qué hace
-
-Concetrado en el funcionamiento de la aplicación
-Contienen componentes de UI u otros containers
-No tienen estilos
-Proveen de datos a componentes de UI u otros contenedores
-Proveen de callbacks a la UI
-Normalmente tienen estado
-Llaman acciones
-Generados por higher order components
-
-/////// Coposicion de Componentes
+// -Puede contener smart components u otros componentes de UI
+// -Permiten composición con `[props.children]``
+// -No depeden del resto de la aplicación
+// -No especifica cómo los datos son cargados o mutados
+// -Recibe datos y callbacks solo con propiedades
+// -Rara vez tienen su propio estado
+// -Están escritos como componentes funcionales a menos que necesiten mejoras de performance. 
+// 		Sólo pueden ser Componentes funcionales o Pure Components
 
 
-**Referencias **
+// Containers Qué hace
 
-Las referencias nos permite alamacenar en react un elemento HTML
+// Concetrado en el funcionamiento de la aplicación
+// Contienen componentes de UI u otros containers
+// No tienen estilos
+// Proveen de datos a componentes de UI u otros contenedores
+// Proveen de callbacks a la UI
+// Normalmente tienen estado
+// Llaman acciones
+// Generados por higher order components
 
-value // No permite editar el input al menos que se envie el valor mediante props.
-defaultValue // permite editar el input
+// /////// Coposicion de Componentes
 
-Al asignar valor a la propiedad value de un elemento input,
- se está definiendo como valor inmutable, y el input se vuelve un 
- elemento de sólo lectura … como una constante.
 
-Para permitir la mutabilidad del valor, se debe asignar mediante la 
-propiedad defaultValue en lugar de value.
+// **Referencias **
 
-En cualquiera de los dos casos anteriores, se debería también definir 
-la propiedad (evento) onChange del input para poder manipular posteriormente su valor, y/o disparar
- el update (re-renderizado) del componente.
+// Las referencias nos permite alamacenar en react un elemento HTML
+
+// value // No permite editar el input al menos que se envie el valor mediante props.
+// defaultValue // permite editar el input
+
+// Al asignar valor a la propiedad value de un elemento input,
+//  se está definiendo como valor inmutable, y el input se vuelve un 
+//  elemento de sólo lectura … como una constante.
+
+// Para permitir la mutabilidad del valor, se debe asignar mediante la 
+// propiedad defaultValue en lugar de value.
+
+// En cualquiera de los dos casos anteriores, se debería también definir 
+// la propiedad (evento) onChange del input para poder manipular posteriormente su valor, y/o disparar
+//  el update (re-renderizado) del componente.

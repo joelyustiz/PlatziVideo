@@ -12,9 +12,10 @@ class Home extends Component {
         modalVisible: false,
     }
 
-    handleOpenModal = (event) =>{
+    handleOpenModal = (media) =>{
         this.setState({
             modalVisible: true,
+            media,// si la propiedad se llama igual que la key solo lo declaras una vez
         })
     }
 
@@ -31,12 +32,10 @@ class Home extends Component {
             <HandleError> 
                 <HomeLayout>
                     <Related />
-                    <VideoPlayer 
-                        autoPlay
-                    />
+                    
                     <Categories 
-                        categories = {this.props.data.categories}
-                        handleOpenModal = {this.handleOpenModal }
+                        categories={this.props.data.categories}
+                        handleOpenModal = {this.handleOpenModal}
                     />
                     {
                         this.state.modalVisible && //if condicional solo ve true o false
@@ -44,7 +43,11 @@ class Home extends Component {
                             <Modal
                                 handleClick = {this.handleCloseModal}
                             >
-
+                                <VideoPlayer 
+                                    autoPlay
+                                    src={this.state.media.src}
+                                    title={this.state.media.title}
+                                />
                             </Modal>
                         </ModalContainer>
                     }

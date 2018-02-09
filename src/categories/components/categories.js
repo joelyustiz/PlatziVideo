@@ -12,7 +12,7 @@ function Categories(props) {
                         <Category 
                             key={item.id} 
                             {...item}
-                            handleOpenModal = {props.handleOpenModal}
+                            handleOpenModal={props.handleOpenModal}
                         />
                     )
                 })

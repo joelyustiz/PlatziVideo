@@ -9,7 +9,7 @@ import './playlist.css'
             <div className="Playlist">
                 {
                      props.playlist.map((item) =>{
-                        return <Media handleClick = {props.handleOpenModal} {...item} key= {item.id}/>
+                        return <Media openModal={props.handleOpenModal} {...item} key= {item.id}/>
                     })
                 }             
                 

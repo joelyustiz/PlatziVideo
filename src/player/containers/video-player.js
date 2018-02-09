@@ -101,7 +101,7 @@ class VideoPlayer extends Component {
                 setRef={this.setRef}
             >
                 <Title 
-                    title= "Video chido"
+                    title={this.props.title}
                 />
                 <VideoPlayerControls>
                     <PlayPause
@@ -132,7 +132,7 @@ class VideoPlayer extends Component {
                 <Video 
                     autoplay={this.props.autoPlay}
                     pause={this.state.pause}
-                    src= "http://localhost:9000/VideoPrueba/Prueba.mp4"
+                    src={this.props.src}
                     handleLoadedMetaData={this.handleLoadedMetaData}
                     handleTimeUpdate={this.handleTimeUpdate}
                     handleSeeking={this.handleSeeking}

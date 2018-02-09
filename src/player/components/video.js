@@ -21,7 +21,9 @@ class Video extends Component {
     render(){
         const {
             handleLoadedMetaData,
-            handleTimeUpdate
+            handleTimeUpdate,
+            handleSeeking,
+            handleSeeked,
         } = this.props;
         
         return(
@@ -32,6 +34,8 @@ class Video extends Component {
                      ref={this.setRef}  // hacemos referencia react
                      onLoadedMetadata={handleLoadedMetaData} //miramos la duracion del video
                      onTimeUpdate={handleTimeUpdate} // miramos el tiempo transcurrido
+                     onSeeking={handleSeeking}
+                     onSeeked={handleSeeked}
                  />
             </div>
             
